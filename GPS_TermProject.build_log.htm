@@ -9,14 +9,62 @@ Project File Date:  06/01/2021
 <h2>Output:</h2>
 Build target 'Target 1'
 compiling main.c...
-compiling UART.c...
 linking...
-Program Size: Code=540 RO-data=636 RW-data=0 ZI-data=608  
+Program Size: Code=732 RO-data=636 RW-data=0 ZI-data=608  
 ".\GPS_TermProject.axf" - 0 Error(s), 0 Warning(s).
-iling UART.c...
-UART.c(31): warning:  #1294-D: Old-style function UART0_Read
-  uint8_t UART0_Read(Void){
-UART.c: 1 warning, 0 errors
-linking...
-Program Size: Code=540 RO-data=636 RW-data=0 ZI-data=608  
-".\GPS_TermProject.axf" - 0 Error(s), 2 Warning(s).
+Program Size: Code=740 RO-data=636 RW-data=0 ZI-data=608  
+".\GPS_TermProject.axf" - 0 Error(s), 1 Warning(s).
+axf" - 1 Error(s), 1 Warning(s).
+Target not created
+n.c(13): warning:  #550-D: variable "a" was set but never used
+        char a;
+main.c: 1 warning, 3 errors
+".\GPS_TermProject.axf" - 3 Error(s), 1 Warning(s).
+Target not created
+t created
+g(UART2_BASE);
+UART.c(51): error:  #268: declaration may not appear after executable statement in block
+              char c2=UARTCharGetNonBlocking(UART2_BASE);
+UART.c(54): error:  #268: declaration may not appear after executable statement in block
+                  char c3=UARTCharGetNonBlocking(UART2_BASE);
+UART.c(57): error:  #268: declaration may not appear after executable statement in block
+                      char c4=UARTCharGetNonBlocking(UART2_BASE);
+UART.c(60): error:  #268: declaration may not appear after executable statement in block
+                          char c5=UARTCharGetNonBlocking(UART2_BASE);
+UART.c(63): error:  #268: declaration may not appear after executable statement in block
+                              char c6=UARTCharGetNonBlocking(UART2_BASE);
+UART.c(66): error:  #268: declaration may not appear after executable statement in block
+                                  char c7=UARTCharGetNonBlocking(UART2_BASE);
+UART.c(78): warning:  #223-D: function "strtok" declared implicitly
+                                  token = strtok(GPSValues, comma);
+UART.c(78): error:  #513: a value of type "int" cannot be assigned to an entity of type "char *"
+                                  token = strtok(GPSValues, comma);
+UART.c(79): error:  #20: identifier "NULL" is undefined
+                                  while( token != NULL ) {
+UART.c(80): warning:  #223-D: function "strcpy" declared implicitly
+                                      strcpy(parseValue[index], token);
+UART.c(81): error:  #513: a value of type "int" cannot be assigned to an entity of type "char *"
+                                      token = strtok(NULL, comma);
+UART.c(86): warning:  #223-D: function "strcmp" declared implicitly
+                                  if(strcmp(parseValue[1],"A")==0){
+UART.c(87): warning:  #223-D: function "atof" declared implicitly
+                                      latitude=atof(parseValue[2]);
+UART.c(96): warning:  #223-D: function "sprintf" declared implicitly
+                                      sprintf(latitudeResult,"%f", result);
+UART.c(119): warning:  #223-D: function "saatAyarla" declared implicitly
+                                      saat=saatAyarla(parseValue[0]);
+UART.c(119): error:  #513: a value of type "int" cannot be assigned to an entity of type "char *"
+                                      saat=saatAyarla(parseValue[0]);
+UART.c(132): warning:  #223-D: function "printf" declared implicitly
+                                      printf("Saat  = %s\n",guncelSaat);
+UART.c(136): warning:  #223-D: function "SysCtlDelay" declared implicitly
+                                      SysCtlDelay(SysCtlClockGet()/6);}
+UART.c(136): warning:  #223-D: function "SysCtlClockGet" declared implicitly
+                                      SysCtlDelay(SysCtlClockGet()/6);}
+UART.c(138): warning:  #223-D: function "printf" declared implicitly
+                                      printf("  GPS Verileri Okunuyor\n\n\n");}
+UART.c(140): warning:  #223-D: function "printf" declared implicitly
+                                  printf("");
+UART.c: 13 warnings, 12 errors
+".\GPS_TermProject.axf" - 12 Error(s), 13 Warning(s).
+Target not created

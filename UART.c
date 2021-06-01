@@ -24,3 +24,20 @@ void UART2_Init(void){
 	GPIO_PORTD_AMSEL_R &= ~0xC0;	//disable analog on pin6-7
 
 }
+
+uint8_t UART2_Available(void){
+	//if fifo empty return 0 else return 1
+	return ((UART2_FR_R & UART_FR_RXFE) == UART_FR_RXFE) ? 0 : 1;
+}
+
+
+//pooling GIVES A WARNING BUT OK 
+//$GPGGA,092725.00,4717.11399,N,00833.91590,E,1,8,1.01,499.6,M,48.0,M,,0*5B
+// or $GPGLL 
+//AND PARSE TILL END
+char UART2_Read(void){
+	while (UART2_Available() != 1);    //busy waiting // could be replaced by flag "1" so caller of the fn will ignore it..
+	
+	return ((char)(UART2_DR_R&0xFF));  // &0xFF for data masking to get the data bits only
+	
+}
