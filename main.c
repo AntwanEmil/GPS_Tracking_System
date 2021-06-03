@@ -5,9 +5,5 @@
 
 void SystemInit(){}
 int main(){
-	char c;
-	
-	UART_Init();
-	while(1)
-	c = UART_Read();
+
 }
