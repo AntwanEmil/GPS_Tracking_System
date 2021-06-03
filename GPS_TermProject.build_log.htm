@@ -4,26 +4,25 @@
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
 F:\GPS_Tracking_System\GPS_TermProject.uvproj
-Project File Date:  06/01/2021
+Project File Date:  06/03/2021
 
 <h2>Output:</h2>
-Build target 'Target 1'
+Rebuild target 'Target 1'
+assembling startup_TM4C123.s...
 compiling main.c...
+main.c(8): warning:  #550-D: variable "c" was set but never used
+        char c;
+main.c: 1 warning, 0 errors
 compiling UART.c...
 linking...
-Program Size: Code=732 RO-data=636 RW-data=0 ZI-data=608  
-".\GPS_TermProject.axf" - 0 Error(s), 0 Warning(s).
-0 RO-data=636 RW-data=0 ZI-data=608  
+Program Size: Code=692 RO-data=636 RW-data=0 ZI-data=608  
 ".\GPS_TermProject.axf" - 0 Error(s), 1 Warning(s).
-axf" - 1 Error(s), 1 Warning(s).
+image symbols.
+Not enough information to list the image map.
+Finished: 2 information, 0 warning and 2 error messages.
+".\GPS_TermProject.axf" - 2 Error(s), 0 Warning(s).
 Target not created
-n.c(13): warning:  #550-D: variable "a" was set but never used
-        char a;
-main.c: 1 warning, 3 errors
-".\GPS_TermProject.axf" - 3 Error(s), 1 Warning(s).
-Target not created
-t created
-g(UART2_BASE);
+(UART2_BASE);
 UART.c(51): error:  #268: declaration may not appear after executable statement in block
               char c2=UARTCharGetNonBlocking(UART2_BASE);
 UART.c(54): error:  #268: declaration may not appear after executable statement in block

@@ -1,16 +1,13 @@
-#include "stdint.h"
 #include "tm4c123gh6pm.h"
-#include "math.h"
 #include "UART.h"
-#define PI 3.14159265359
+#include "stdint.h"
+
 
 void SystemInit(){}
+int main(){
+	char c;
 	
-int main(void){
-	//plz declare all variables at the beginning of the function to avoid errors
-
-	
-	UART2_Init();
-	
-
+	UART_Init();
+	while(1)
+	c = UART_Read();
 }
