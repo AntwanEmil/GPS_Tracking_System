@@ -7,7 +7,13 @@
 
 void SystemInit(){}
 	
-	
+void LED_ON(float distance)
+{
+	if (distance > 100)
+	{
+		GPIO_PORTF_DATA_R = 0x08;  //green LED
+	}
+}	
 	
 	
 	float total_distance(float * total_distance ,float lat1, float long1, float lat2, float long2)
