@@ -3,26 +3,52 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
-D:\tiva_codes\GPS_Tracking_System\GPS_TermProject.uvproj
-Project File Date:  06/05/2021
+E:\tiva\GPS_Tracking_System\GPS_TermProject.uvproj
+Project File Date:  06/06/2021
 
 <h2>Output:</h2>
 Build target 'Target 1'
-linking...
-Program Size: Code=8452 RO-data=1084 RW-data=0 ZI-data=608  
-".\GPS_TermProject.axf" - 0 Error(s), 0 Warning(s).
-Load "D:\\tiva_codes\\GPS_Tracking_System\\GPS_TermProject.axf" 
-Connecting: Mode=JTAG, Speed=1000000Hz
-Erase Done.
-Programming Done.
-Verify OK.
 compiling main.c...
 LCD.h(9): warning:  #1-D: last line of file ends without a newline
   void LCD_STRING(char *str);
 SYSTICK.h(4): warning:  #1-D: last line of file ends without a newline
   void delay_micro(uint32_t time);
-main.c(25): warning:  #223-D: function "sin" declared implicitly
+DISTANCE.h(3): warning:  #1-D: last line of file ends without a newline
+  float total_distance(float * total_distance ,float lat1, float long1, float lat2, float long2);
+main.c(24): warning:  #223-D: function "portF_Init" declared implicitly
+        portF_Init();
+main.c(33): warning:  #223-D: function "LED_ON" declared implicitly
+        LED_ON(distance);
+main.c: 5 warnings, 0 errors
+compiling LCD.c...
+SYSTICK.h(4): warning:  #1-D: last line of file ends without a newline
+  void delay_micro(uint32_t time);
+LCD.c(75): warning:  #550-D: variable "up" was set but never used
+        uint8_t up ;
+LCD.c: 2 warnings, 0 errors
+compiling DISTANCE.c...
+SYSTICK.h(4): warning:  #1-D: last line of file ends without a newline
+  void delay_micro(uint32_t time);
+DISTANCE.c(17): warning:  #223-D: function "sin" declared implicitly
     a = (sin(delta_x / 2) * sin(delta_x / 2)) + cos(x1) * cos(x2) * sin(delta_y / 2) * sin(delta_y / 2);
+DISTANCE.c(17): warning:  #223-D: function "cos" declared implicitly
+    a = (sin(delta_x / 2) * sin(delta_x / 2)) + cos(x1) * cos(x2) * sin(delta_y / 2) * sin(delta_y / 2);
+DISTANCE.c(18): warning:  #223-D: function "atan2" declared implicitly
+    c = 2 * atan2(sqrt(a), sqrt(1-a));
+DISTANCE.c(18): warning:  #223-D: function "sqrt" declared implicitly
+    c = 2 * atan2(sqrt(a), sqrt(1-a));
+DISTANCE.c(23): warning:  #1-D: last line of file ends without a newline
+  }
+DISTANCE.c: 6 warnings, 0 errors
+linking...
+Program Size: Code=1432 RO-data=636 RW-data=0 ZI-data=608  
+".\GPS_TermProject.axf" - 0 Error(s), 13 Warning(s).
+Load "E:\\tiva\\GPS_Tracking_System\\GPS_TermProject.axf" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+ / 2)) + cos(x1) * cos(x2) * sin(delta_y / 2) * sin(delta_y / 2);
 main.c(25): warning:  #223-D: function "cos" declared implicitly
     a = (sin(delta_x / 2) * sin(delta_x / 2)) + cos(x1) * cos(x2) * sin(delta_y / 2) * sin(delta_y / 2);
 main.c(26): warning:  #223-D: function "atan2" declared implicitly
@@ -35,67 +61,3 @@ main.c(48): warning:  #223-D: function "LED_ON" declared implicitly
         LED_ON(distance);
 main.c: 8 warnings, 0 errors
 "main.c" - 0 Error(s), 8 Warning(s).
-* atan2(sqrt(a), sqrt(1-a));
-main.c(39): warning:  #223-D: function "portF_Init" declared implicitly
-  portF_Init();
-main.c(52): warning:  #223-D: function "LED_ON" declared implicitly
-        LED_ON(distance);
-main.c: 8 warnings, 0 errors
-"main.c" - 0 Error(s), 8 Warning(s).
-e "size" was set but never used
-        uint32_t size;
-main.c(45): warning:  #177-D: variable "data" was declared but never referenced
-      char data[100];
-main.c(46): warning:  #177-D: variable "lat" was declared but never referenced
-                char lat[9]; 
-main.c(47): warning:  #177-D: variable "lon" was declared but never referenced
-                char lon[10];
-main.c: 18 warnings, 0 errors
-linking...
-.\GPS_TermProject.axf: Error: L6218E: Undefined symbol LCD_Cmd (referred from main.o).
-.\GPS_TermProject.axf: Error: L6218E: Undefined symbol LCD_DISTANCE (referred from main.o).
-.\GPS_TermProject.axf: Error: L6218E: Undefined symbol LCD_STRING (referred from main.o).
-.\GPS_TermProject.axf: Error: L6218E: Undefined symbol LCD_init (referred from main.o).
-Not enough information to list image symbols.
-Finished: 1 information, 0 warning and 4 error messages.
-".\GPS_TermProject.axf" - 4 Error(s), 18 Warning(s).
-Target not created
-compiling main.c...
-LCD.h(9): warning:  #1-D: last line of file ends without a newline
-  void LCD_STRING(char *str);
-SYSTICK.h(4): warning:  #1-D: last line of file ends without a newline
-  void delay_micro(uint32_t time);
-main.c(25): warning:  #223-D: function "sin" declared implicitly
-    a = (sin(delta_x / 2) * sin(delta_x / 2)) + cos(x1) * cos(x2) * sin(delta_y / 2) * sin(delta_y / 2);
-main.c(25): warning:  #223-D: function "cos" declared implicitly
-    a = (sin(delta_x / 2) * sin(delta_x / 2)) + cos(x1) * cos(x2) * sin(delta_y / 2) * sin(delta_y / 2);
-main.c(26): warning:  #223-D: function "atan2" declared implicitly
-    c = 2 * atan2(sqrt(a), sqrt(1-a));
-main.c(26): warning:  #223-D: function "sqrt" declared implicitly
-    c = 2 * atan2(sqrt(a), sqrt(1-a));
-main.c(50): warning:  #223-D: function "portF_Init" declared implicitly
-  portF_Init();
-main.c(63): warning:  #223-D: function "LED_ON" declared implicitly
-        LED_ON(distance);
-main.c(37): warning:  #177-D: variable "c" was declared but never referenced
-                char c;
-main.c(38): warning:  #177-D: variable "number" was declared but never referenced
-        uint32_t number;
-main.c(39): warning:  #177-D: variable "flag" was declared but never referenced
-        uint8_t flag;
-main.c(41): warning:  #177-D: variable "out" was declared but never referenced
-        char  out[500];
-main.c(42): warning:  #550-D: variable "i" was set but never used
-        int i;
-main.c(43): warning:  #177-D: variable "y" was declared but never referenced
-        int y;
-main.c(44): warning:  #550-D: variable "size" was set but never used
-        uint32_t size;
-main.c(45): warning:  #177-D: variable "data" was declared but never referenced
-      char data[100];
-main.c(46): warning:  #177-D: variable "lat" was declared but never referenced
-                char lat[9]; 
-main.c(47): warning:  #177-D: variable "lon" was declared but never referenced
-                char lon[10];
-main.c: 18 warnings, 0 errors
-"main.c" - 0 Error(s), 18 Warning(s).

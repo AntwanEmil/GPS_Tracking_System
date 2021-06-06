@@ -68,6 +68,7 @@ void LCD_DISTANCE(uint32_t number)
 			delay_milli(1);
 		}
 }
+
 void LCD_STRING(char *str)
 {
   uint32_t size;
