@@ -61,6 +61,10 @@ uint32_t number_digits(uint32_t num)
 void LCD_DISTANCE(uint32_t number)
 { char change[10];
 	uint32_t y;	
+		if(number==0)
+	{LCD_Data('0');
+	delay_milli(1);
+	return;}
 	dec_to_str(change,number,number_digits(number));
 		for(y=0;y<number_digits(number);y++)
 		{
@@ -74,6 +78,7 @@ void LCD_STRING(char *str)
   uint32_t size;
 	uint8_t up ;
 	uint32_t y;
+	
 	size=strlen(str);
 	up=1;
 	for(y=0;y<size;y++)

@@ -430,6 +430,16 @@
               <FileType>1</FileType>
               <FilePath>.\LED.c</FilePath>
             </File>
+            <File>
+              <FileName>SYSTICK.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\SYSTICK.c</FilePath>
+            </File>
+            <File>
+              <FileName>LCD.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\LCD.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
