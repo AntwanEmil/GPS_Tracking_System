@@ -15,9 +15,20 @@
 	
 
 	
-	
 void SystemInit(){}	
+	
+
+	
+	
+	
+	
+	
 int main(){
+	
+
+	
+	
+	
 	uint32_t distance;
 
 	systic_init();
@@ -35,6 +46,12 @@ int main(){
 	LCD_DISTANCE(distance);
 	delay_milli(10);
 	LCD_STRING("m");
+
+
+	
+	
+
+	
 		
 
 
