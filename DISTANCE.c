@@ -4,7 +4,7 @@
 #define PI 3.14159265359
 
 
-	float total_distance(float * total_distance ,float lat1, float long1, float lat2, float long2)
+float total_distance(float * total_distance ,float lat1, float long1, float lat2, float long2)
 {
 	uint32_t R = 6371000;
 	double x1, x2, delta_x, delta_y;
