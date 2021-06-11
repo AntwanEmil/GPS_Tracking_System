@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <html>
 <body>
 <pre>
@@ -14,60 +13,17 @@ LCD.h(9): warning:  #1-D: last line of file ends without a newline
   void LCD_STRING(char *str);
 SYSTICK.h(4): warning:  #1-D: last line of file ends without a newline
   void delay_micro(uint32_t time);
-DISTANCE.h(3): warning:  #1-D: last line of file ends without a newline
-  float total_distance(float * total_distance ,float lat1, float long1, float lat2, float long2);
-main.c(35): warning:  #223-D: function "portF_Init" declared implicitly
-        portF_Init();
-main.c(44): warning:  #223-D: function "LED_ON" declared implicitly
-        LED_ON(distance);
-main.c: 5 warnings, 0 errors
+main.c(86): warning:  #68-D: integer conversion resulted in a change of sign
+        } while (size == -1);
+main.c(115): warning:  #68-D: integer conversion resulted in a change of sign
+                        } while (size == -1);
+main.c(46): warning:  #177-D: variable "i" was declared but never referenced
+        int i;
+main.c(47): warning:  #177-D: variable "y" was declared but never referenced
+        int y;
+main.c(49): warning:  #177-D: variable "temp" was declared but never referenced
+        uint32_t temp;
+main.c: 7 warnings, 0 errors
 linking...
-Program Size: Code=1876 RO-data=636 RW-data=0 ZI-data=608  
-".\GPS_TermProject.axf" - 0 Error(s), 5 Warning(s).
-</pre>
-</body>
-</html>
-t.axf" - 0 Error(s), 5 Warning(s).
-
-=======
-<html>
-<body>
-<pre>
-<h1>µVision Build Log</h1>
-<h2>Project:</h2>
-E:\Courses_Talta 7asebaat\2nd Term\Micro Processors\projects\GPS_Tracking_System\GPS_TermProject.uvproj
-Project File Date:  06/10/2021
-
-<h2>Output:</h2>
-Build target 'Target 1'
-assembling startup_TM4C123.s...
-compiling main.c...
-LCD.h(9): warning:  #1-D: last line of file ends without a newline
-  void LCD_STRING(char *str);
-SYSTICK.h(4): warning:  #1-D: last line of file ends without a newline
-  void delay_micro(uint32_t time);
-DISTANCE.h(3): warning:  #1-D: last line of file ends without a newline
-  float total_distance(float * total_distance ,float lat1, float long1, float lat2, float long2);
-main.c(35): warning:  #223-D: function "portF_Init" declared implicitly
-        portF_Init();
-main.c(44): warning:  #223-D: function "LED_ON" declared implicitly
-        LED_ON(distance);
-main.c: 5 warnings, 0 errors
-compiling UART.c...
-UART.c(38): warning:  #177-D: variable "I_FBRD" was declared but never referenced
-        double I_FBRD;
-UART.c(70): warning:  #940-D: missing return statement at end of non-void function "read"
-  }
-UART.c: 2 warnings, 0 errors
-compiling LED.c...
-compiling SYSTICK.c...
-compiling LCD.c...
-SYSTICK.h(4): warning:  #1-D: last line of file ends without a newline
-  void delay_micro(uint32_t time);
-LCD.c(79): warning:  #550-D: variable "up" was set but never used
-        uint8_t up ;
-LCD.c: 2 warnings, 0 errors
-linking...
-Program Size: Code=2152 RO-data=636 RW-data=0 ZI-data=608  
-".\GPS_TermProject.axf" - 0 Error(s), 9 Warning(s).
->>>>>>> cfc42afe801b2f4ce58fe108a60bf2fd054ec3ba
+Program Size: Code=14972 RO-data=1540 RW-data=0 ZI-data=608  
+".\GPS_TermProject.axf" - 0 Error(s), 7 Warning(s).
