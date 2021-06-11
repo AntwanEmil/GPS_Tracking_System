@@ -7,7 +7,8 @@ E:\GPS_Tracking_System\GPS_TermProject.uvproj
 Project File Date:  06/06/2021
 
 <h2>Output:</h2>
-Build target 'Target 1'
+Rebuild target 'Target 1'
+assembling startup_TM4C123.s...
 compiling main.c...
 LCD.h(9): warning:  #1-D: last line of file ends without a newline
   void LCD_STRING(char *str);
@@ -24,9 +25,20 @@ main.c(47): warning:  #177-D: variable "y" was declared but never referenced
 main.c(49): warning:  #177-D: variable "temp" was declared but never referenced
         uint32_t temp;
 main.c: 7 warnings, 0 errors
+compiling UART.c...
+UART.c(38): warning:  #177-D: variable "I_FBRD" was declared but never referenced
+        double I_FBRD;
+UART.c(70): warning:  #940-D: missing return statement at end of non-void function "read"
+  }
+UART.c: 2 warnings, 0 errors
+compiling LED.c...
+compiling SYSTICK.c...
+compiling LCD.c...
+SYSTICK.h(4): warning:  #1-D: last line of file ends without a newline
+  void delay_micro(uint32_t time);
+LCD.c(79): warning:  #550-D: variable "up" was set but never used
+        uint8_t up ;
+LCD.c: 2 warnings, 0 errors
 linking...
 Program Size: Code=14972 RO-data=1540 RW-data=0 ZI-data=608  
-".\GPS_TermProject.axf" - 0 Error(s), 7 Warning(s).
-</pre>
-</body>
-</html>
+".\GPS_TermProject.axf" - 0 Error(s), 11 Warning(s).
