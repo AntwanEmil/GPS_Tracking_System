@@ -5,7 +5,7 @@
 
 void UART_Init (void);
 char UART_Read (void);
-void uart0_Write(float data);
+void UART0_Write(uint8_t data);
 void uart0_init(void);
 char UART0_Read(void);
 float read(void);

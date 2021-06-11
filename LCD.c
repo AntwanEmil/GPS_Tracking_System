@@ -76,11 +76,11 @@ void LCD_DISTANCE(uint32_t number)
 void LCD_STRING(char *str)
 {
   uint32_t size;
-	uint8_t up ;
+	//uint8_t up;
 	uint32_t y;
 	
 	size=strlen(str);
-	up=1;
+	//up=1;
 	for(y=0;y<size;y++)
 		{	delay_milli(10);
 			LCD_Data(str[y]);
