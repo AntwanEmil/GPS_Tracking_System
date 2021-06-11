@@ -43,10 +43,9 @@ int main() {
 	char lon1[10];
 	char lat2[9];
 	char lon2[10];
-	int i;
-	int y;
+	char out_test[10] = {'1','2','3','.','2','4','6','7'};
+	uint8_t i=0;
 	//uint32_t size;
-	uint32_t temp;
 	//char data[100];
   //	char lat[10]; 
   //	char lon[10];
@@ -59,10 +58,13 @@ int main() {
 	//portF_Init();
 	//switch_inter();
 	LCD_init();
+	uart0_init();
 
 
-
-
+		while (i<10){
+			UART0_Write(out_test[i]);
+			i=i+1;
+		}
 
 
 	LCD_Cmd(0x01);//clear
@@ -75,8 +77,8 @@ int main() {
 	//in=fopen ("map.txt","w");
 	//fprintf(buffer_out,100,"%d,%d",3,2);
 	//fwrite(buffer_out,sizeof(char),strlen(buffer_out),in);
-
-
+	
+	
 
 	///////////////////////////////////
 
@@ -120,6 +122,7 @@ int main() {
 				lat2_no = atof(lat2);
 				lon2_no = atof(lon2);
 
+				
 				///////
 				/*
 				LCD_DISTANCE(lat1_no);
