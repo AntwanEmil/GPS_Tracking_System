@@ -10,25 +10,21 @@ Project File Date:  06/12/2021
 Rebuild target 'Target 1'
 assembling startup_TM4C123.s...
 compiling main.c...
-main.c(69): warning:  #223-D: function "UART0_Init" declared implicitly
-        UART0_Init();
-main.c(107): warning:  #68-D: integer conversion resulted in a change of sign
-        } while (size == -1);
-main.c(151): warning:  #68-D: integer conversion resulted in a change of sign
-                        } while (size == -1);
-main.c(39): warning:  #177-D: variable "dummy" was declared but never referenced
-        float dummy;
+LED.h(4): warning:  #1-D: last line of file ends without a newline
+  void LED_ON(uint32_t distance);
+main.c(76): warning:  #223-D: function "UART0_Init" declared implicitly
+  UART0_Init();
+main.c(198): warning:  #1-D: last line of file ends without a newline
+  }
+main.c(60): warning:  #177-D: variable "dummy" was declared but never referenced
+  float dummy;
 main.c: 4 warnings, 0 errors
 compiling UART.c...
 compiling LED.c...
 compiling SYSTICK.c...
 compiling LCD.c...
 linking...
-Program Size: Code=15444 RO-data=1540 RW-data=0 ZI-data=608  
+Program Size: Code=15284 RO-data=1476 RW-data=4 ZI-data=612  
 ".\GPS_TermProject.axf" - 0 Error(s), 4 Warning(s).
-</pre>
-</body>
-</html>
-ed: 1 information, 0 warning and 1 error messages.
 ".\GPS_TermProject.axf" - 1 Error(s), 4 Warning(s).
 Target not created
