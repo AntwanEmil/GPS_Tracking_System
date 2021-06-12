@@ -54,23 +54,65 @@ void uart0_init(void)
 	GPIO_PORTA_DEN_R |= 0x03; 	    
 }
 
+void UART0_Init(void)
+{
+//uint8_t cycle;
+SYSCTL_RCGCUART_R |= 1;
+SYSCTL_RCGCGPIO_R |= 1;
+//cycle = 5;
+//cycle =2;
+//cycle =3;
+UART0_CTL_R = 0;
+
+
+
+UART0_IBRD_R = 104;
+UART0_FBRD_R = 11;
+UART0_CC_R = 0;
+
+UART0_LCRH_R = 0x60;
+UART0_CTL_R |= 0x301;
+
+
+
+
+GPIO_PORTA_AFSEL_R |= 0x03 ;
+
+GPIO_PORTA_PCTL_R = (GPIO_PORTA_PCTL_R&0XFFFFF00)|0x00000011;
+GPIO_PORTA_DEN_R |= 0x03;
+
+//cycle = 5;
+//cycle =2;
+//cycle =3;
+//cycle = 5;
+//cycle =2;
+//cycle =3;
+
+}
+
+
+
 uint8_t uart0_available(void)
 {
-	return((UART0_FR_R&UART_FR_RXFE)==UART_FR_RXFE)? 0:1;
+return((UART0_FR_R&UART_FR_RXFE)==UART_FR_RXFE)? 0:1;
 }
+
+
 
 
 
 float read(void)
 {
-	while(uart0_available()!=1);
-		
-	return (float)(UART0_DR_R&0xFF);
+while(uart0_available()!=1);
+
+return (float)(UART0_DR_R&0xFF);
 }
 
+
+
 void UART0_Write(uint8_t data){
-	while((UART0_FR_R & UART_FR_TXFF) !=0);
-	UART0_DR_R = data;
+while((UART0_FR_R & UART_FR_TXFF) !=0);
+UART0_DR_R = data;
 }
 
 int data_line (char * data) {
