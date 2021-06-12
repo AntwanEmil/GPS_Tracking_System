@@ -9,49 +9,38 @@ ports = serial.tools.list_ports.comports()
 for port, desc, hwid in sorted(ports):
         print("{}: {} [{}]".format(port, desc, hwid))
 
+f = open("map_out.txt", "w")
 
-ser = serial.Serial('COM5', baudrate = 9600, timeout=5)
+with serial.Serial('COM5', baudrate = 9600, timeout=0) as ser:
+	x = ser.read(5)
+	if (x != ''):          
+		f.write(x)
+
+
+
+
+
+
 j = 0
 lat = []
 longet= []
 
-
-
-
-
-
-
-
-
-"""
-i=0
-lat_string = ""
-long_string = ""
-combination = ""
-with open('map_out.txt') as f:
-
-		combination = f.split()
-
-
-		lat.append(lat_string)
-		long.append(long_string)
-		lat[i] = float(lat[i])
-		long[i] = float(long[i])
-		i=i+1
-
-"""
-
-file_in= open('map_out','r').readline()
+lat_value = 0.0
+longet_value = 0.0
+file_in= open('map_out.txt','r').readline()
 points=file_in.split(' ')
 print(points)
 i = 0
 
 for point in points:
 	if (point != ''):
-		lat.append(   float(point.split("&")[0][0:2]   )+float(point.split("&")[0][2:])/60 )
-		print(float(point.split("&")[0]))
-		print(float(point.split("&")[1]   ))
-		longet.append(   float(point.split("&")[1][0:3]   )+float(point.split("&")[1][3:])/60 )
+		lat_value = float(point.split("&")[0][0:2]) + float(point.split("&")[0][2:])/60
+		longet_value = float(point.split("&")[1][0:3] )+float(point.split("&")[1][3:])/60
+		if (lat_value > 22 && lat_value < 32 && longet_value > 25 && longet_value < 34):	##added max & min lat/longet of EGYPT because some error redings from gps
+			lat.append(  lat_value )
+			print(float(point.split("&")[0]))
+			print(float(point.split("&")[1]))
+			longet.append(longet_value)
 
 
 print(lat)
