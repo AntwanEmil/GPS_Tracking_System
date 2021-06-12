@@ -75,7 +75,7 @@
         <tvExpOptDlg>0</tvExpOptDlg>
         <IsCurrentTarget>1</IsCurrentTarget>
       </OPTFL>
-      <CpuCode>255</CpuCode>
+      <CpuCode>0</CpuCode>
       <DebugOpt>
         <uSim>1</uSim>
         <uTrg>0</uTrg>
@@ -115,16 +115,6 @@
       <TargetDriverDllRegistry>
         <SetRegEntry>
           <Number>0</Number>
-          <Key>DLGDARM</Key>
-          <Name>(1010=-1,-1,-1,-1,0)(1007=-1,-1,-1,-1,0)(1008=-1,-1,-1,-1,0)(1009=-1,-1,-1,-1,0)(1012=-1,-1,-1,-1,0)(9108=-1,-1,-1,-1,0)(9106=-1,-1,-1,-1,0)(9104=-1,-1,-1,-1,0)(9107=-1,-1,-1,-1,0)(9102=-1,-1,-1,-1,0)</Name>
-        </SetRegEntry>
-        <SetRegEntry>
-          <Number>0</Number>
-          <Key>ARMDBGFLAGS</Key>
-          <Name>-T0</Name>
-        </SetRegEntry>
-        <SetRegEntry>
-          <Number>0</Number>
           <Key>UL2CM3</Key>
           <Name>UL2CM3(-O207 -S0 -C0 -FO7 -FD20000000 -FC800 -FN1 -FF0TM4C123_256 -FS00 -FL040000)</Name>
         </SetRegEntry>
@@ -136,12 +126,12 @@
       <DebugFlag>
         <trace>0</trace>
         <periodic>0</periodic>
-        <aLwin>1</aLwin>
+        <aLwin>0</aLwin>
         <aCover>0</aCover>
-        <aSer1>1</aSer1>
+        <aSer1>0</aSer1>
         <aSer2>0</aSer2>
         <aPa>0</aPa>
-        <viewmode>1</viewmode>
+        <viewmode>0</viewmode>
         <vrSel>0</vrSel>
         <aSym>0</aSym>
         <aTbox>0</aTbox>
@@ -178,13 +168,8 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-<<<<<<< HEAD
-      <TopLine>230</TopLine>
-      <CurrentLine>235</CurrentLine>
-=======
-      <TopLine>228</TopLine>
-      <CurrentLine>240</CurrentLine>
->>>>>>> f8a6f62555eaf45bea4d1094850da3e0a7ef647e
+      <TopLine>1</TopLine>
+      <CurrentLine>1</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\startup_TM4C123.s</PathWithFileName>
       <FilenameWithoutPath>startup_TM4C123.s</FilenameWithoutPath>
@@ -199,13 +184,8 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-<<<<<<< HEAD
-      <TopLine>1</TopLine>
-      <CurrentLine>85</CurrentLine>
-=======
-      <TopLine>97</TopLine>
-      <CurrentLine>124</CurrentLine>
->>>>>>> f8a6f62555eaf45bea4d1094850da3e0a7ef647e
+      <TopLine>188</TopLine>
+      <CurrentLine>205</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\main.c</PathWithFileName>
       <FilenameWithoutPath>main.c</FilenameWithoutPath>
@@ -218,15 +198,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>30</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-<<<<<<< HEAD
-      <TopLine>62</TopLine>
-      <CurrentLine>77</CurrentLine>
-=======
-      <TopLine>53</TopLine>
-      <CurrentLine>71</CurrentLine>
->>>>>>> f8a6f62555eaf45bea4d1094850da3e0a7ef647e
+      <TopLine>9</TopLine>
+      <CurrentLine>10</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\UART.c</PathWithFileName>
       <FilenameWithoutPath>UART.c</FilenameWithoutPath>
@@ -255,17 +230,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-<<<<<<< HEAD
-      <ColumnNumber>0</ColumnNumber>
-      <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
-=======
-      <ColumnNumber>2</ColumnNumber>
+      <ColumnNumber>39</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>1</TopLine>
-      <CurrentLine>15</CurrentLine>
->>>>>>> f8a6f62555eaf45bea4d1094850da3e0a7ef647e
+      <CurrentLine>8</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\LED.c</PathWithFileName>
       <FilenameWithoutPath>LED.c</FilenameWithoutPath>
@@ -278,10 +246,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>1</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>1</TopLine>
+      <CurrentLine>24</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\SYSTICK.c</PathWithFileName>
       <FilenameWithoutPath>SYSTICK.c</FilenameWithoutPath>
@@ -294,15 +262,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>9</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-<<<<<<< HEAD
-      <TopLine>1</TopLine>
-      <CurrentLine>1</CurrentLine>
-=======
-      <TopLine>73</TopLine>
+      <TopLine>63</TopLine>
       <CurrentLine>95</CurrentLine>
->>>>>>> f8a6f62555eaf45bea4d1094850da3e0a7ef647e
       <bDave2>0</bDave2>
       <PathWithFileName>.\LCD.c</PathWithFileName>
       <FilenameWithoutPath>LCD.c</FilenameWithoutPath>

@@ -36,15 +36,16 @@ float total_distance(float * total_distance ,float lat1, float long1, float lat2
 int main() {
 	///////////////////////////////////////////////////////////////
 	uint32_t size;
+	float dummy;
 	float lat1_no, lon1_no, lat2_no, lon2_no;
 	float total_dist;
 	char data[90];
-	char lat1[9];
-	char lon1[10];
-	char lat2[9];
-	char lon2[10];
-	char out_test[10] = {'1','2','3','.','2','4','6','7'};
-	uint8_t i=0;
+	char lat1[12];
+	char lon1[12];
+	char lat2[12];
+	char lon2[12];
+	//char out_test[10] = {'1','2','3','.','2','4','6','7'};
+	uint8_t i;
 	//uint32_t size;
 	//char data[100];
   //	char lat[10]; 
@@ -52,19 +53,20 @@ int main() {
 	  ////////////////////////////////////////////////////////////
 	size = 0;
 	total_dist = 0;
+	i=0;
 	UART_Init();
 	////////////////////////////////////////////////////////////
+
 	systic_init();
 	//portF_Init();
 	//switch_inter();
 	LCD_init();
-	uart0_init();
-
-
-		while (i<10){
-			UART0_Write(out_test[i]);
-			i=i+1;
-		}
+	
+	
+	delay_milli(50);
+	
+	
+	UART0_Init();
 
 
 	LCD_Cmd(0x01);//clear
@@ -73,6 +75,23 @@ int main() {
 	lon1_no = atof("123548");
 	delay_milli(10);
 	LCD_DISTANCE(lon1_no);
+
+	i=0;
+
+			
+			
+	LCD_Cmd(0x01);//clear
+	LCD_Cmd(0x80);// start from 1st line
+	delay_milli(100);
+	lon1_no = atof("99999");
+	delay_milli(10);
+	LCD_DISTANCE(lon1_no);
+			
+				//LCD_Cmd(0x01);//clear
+				//LCD_Cmd(0x80);// start from 1st line
+
+
+	
 
 	//in=fopen ("map.txt","w");
 	//fprintf(buffer_out,100,"%d,%d",3,2);
@@ -95,13 +114,28 @@ int main() {
 			//uint32_t size;
 			size = 0;
 
-			/*
+			
 			LCD_Cmd(0x01);//clear
 			LCD_Cmd(0x80);// start from 1st line
 			delay_milli(10);
-			LCD_STRING(lat1);
-			*/
-
+			//LCD_STRING(lat1);
+			LCD_STRING(lon1);
+			
+			
+			while (i<10){
+			UART0_Write(lat1[i]);
+				i = i+1;
+			}
+			i=0;
+			UART0_Write('&');			
+			while (i<10){
+			UART0_Write(lon1[i]);
+				i = i+1;
+			}
+			i=0;
+			UART0_Write(' ');
+			
+			
 			lat1_no = atof(lat1);
 			lon1_no = atof(lon1);
 
@@ -121,7 +155,7 @@ int main() {
 			{
 				lat2_no = atof(lat2);
 				lon2_no = atof(lon2);
-
+		
 				
 				///////
 				/*

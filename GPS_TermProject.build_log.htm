@@ -3,42 +3,27 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
-E:\GPS_Tracking_System\GPS_TermProject.uvproj
-Project File Date:  06/06/2021
+D:\tiva_codes\GPS_Tracking_System\GPS_TermProject.uvproj
+Project File Date:  06/12/2021
 
 <h2>Output:</h2>
-Rebuild target 'Target 1'
-assembling startup_TM4C123.s...
+Build target 'Target 1'
 compiling main.c...
-LCD.h(9): warning:  #1-D: last line of file ends without a newline
-  void LCD_STRING(char *str);
-SYSTICK.h(4): warning:  #1-D: last line of file ends without a newline
-  void delay_micro(uint32_t time);
-main.c(86): warning:  #68-D: integer conversion resulted in a change of sign
+main.c(69): warning:  #223-D: function "UART0_Init" declared implicitly
+        UART0_Init();
+main.c(107): warning:  #68-D: integer conversion resulted in a change of sign
         } while (size == -1);
-main.c(115): warning:  #68-D: integer conversion resulted in a change of sign
+main.c(151): warning:  #68-D: integer conversion resulted in a change of sign
                         } while (size == -1);
-main.c(46): warning:  #177-D: variable "i" was declared but never referenced
-        int i;
-main.c(47): warning:  #177-D: variable "y" was declared but never referenced
-        int y;
-main.c(49): warning:  #177-D: variable "temp" was declared but never referenced
-        uint32_t temp;
-main.c: 7 warnings, 0 errors
-compiling UART.c...
-UART.c(38): warning:  #177-D: variable "I_FBRD" was declared but never referenced
-        double I_FBRD;
-UART.c(70): warning:  #940-D: missing return statement at end of non-void function "read"
-  }
-UART.c: 2 warnings, 0 errors
-compiling LED.c...
-compiling SYSTICK.c...
+main.c(39): warning:  #177-D: variable "dummy" was declared but never referenced
+        float dummy;
+main.c: 4 warnings, 0 errors
 compiling LCD.c...
-SYSTICK.h(4): warning:  #1-D: last line of file ends without a newline
-  void delay_micro(uint32_t time);
-LCD.c(79): warning:  #550-D: variable "up" was set but never used
-        uint8_t up ;
-LCD.c: 2 warnings, 0 errors
 linking...
-Program Size: Code=14972 RO-data=1540 RW-data=0 ZI-data=608  
-".\GPS_TermProject.axf" - 0 Error(s), 11 Warning(s).
+.\GPS_TermProject.axf: Error: L6218E: Undefined symbol UART0_Init (referred from main.o).
+Not enough information to list image symbols.
+Finished: 1 information, 0 warning and 1 error messages.
+".\GPS_TermProject.axf" - 1 Error(s), 4 Warning(s).
+Target not created
+ermProject.axf" - 1 Error(s), 4 Warning(s).
+Target not created

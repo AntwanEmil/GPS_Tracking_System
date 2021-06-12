@@ -97,4 +97,25 @@ void LCD_STRING(char *str)
 		}
 		
 }
+void LCD_DISTANCE_float(double number)
+{ 
+	uint32_t x;
+	double y;	
+	x=number;
+	y=number-x;
+	y*=10000;
+	LCD_STRING("Distance=");
+	delay_milli(10);
+	LCD_DISTANCE(x);
+	delay_milli(10);
+	LCD_STRING(".");
+	delay_milli(10);
+	LCD_DISTANCE(y);
+	delay_milli(10);
+	
+	
+	
+	
+	
+}
     
