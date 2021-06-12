@@ -1,29 +1,30 @@
 Dependencies for Project 'GPS_TermProject', Target 'Target 1': (DO NOT MODIFY !)
-F (.\startup_TM4C123.s)(0x60C50CF5)(--cpu Cortex-M4 --pd "__EVAL SETA 1" -g --apcs=interwork -I "E:\Courses_Talta 7asebaat\2nd Term\Micro Processors\Keil 4\ARM\RV31\INC"-I "E:\Courses_Talta 7asebaat\2nd Term\Micro Processors\Keil 4\ARM\CMSIS\Include"-I "E:\Courses_Talta 7asebaat\2nd Term\Micro Processors\Keil 4\ARM\Inc\TI\TM4C123"--list .\startup_tm4c123.lst --xref -o .\startup_tm4c123.o --depend .\startup_tm4c123.d)
-F (.\main.c)(0x60C515AE)(-c --cpu Cortex-M4 -D__EVAL -g -O0 --apcs=interwork -I "E:\Courses_Talta 7asebaat\2nd Term\Micro Processors\Keil 4\ARM\RV31\INC"-I "E:\Courses_Talta 7asebaat\2nd Term\Micro Processors\Keil 4\ARM\CMSIS\Include"-I "E:\Courses_Talta 7asebaat\2nd Term\Micro Processors\Keil 4\ARM\Inc\TI\TM4C123"-DTM4C123GH6PM-o .\main.o --omf_browse .\main.crf --depend .\main.d)
-I (tm4c123gh6pm.h)(0x60C50CF5)
-I (E:\Courses_Talta 7asebaat\2nd Term\Micro Processors\Keil 4\ARM\ARMCC\include\stdint.h)(0x51C819B4)
-I (UART.h)(0x60C50CF5)
-I (LCD.h)(0x60C50CF5)
-I (E:\Courses_Talta 7asebaat\2nd Term\Micro Processors\Keil 4\ARM\ARMCC\include\string.h)(0x51C819B4)
-I (LED.h)(0x60C50CF5)
-I (SYSTICK.h)(0x60C50CF5)
-I (E:\Courses_Talta 7asebaat\2nd Term\Micro Processors\Keil 4\ARM\ARMCC\include\stdio.h)(0x51C819B4)
-I (E:\Courses_Talta 7asebaat\2nd Term\Micro Processors\Keil 4\ARM\ARMCC\include\stdlib.h)(0x51C819B4)
-I (E:\Courses_Talta 7asebaat\2nd Term\Micro Processors\Keil 4\ARM\ARMCC\include\math.h)(0x51C819B4)
-I (E:\Courses_Talta 7asebaat\2nd Term\Micro Processors\Keil 4\ARM\ARMCC\include\ctype.h)(0x51C819B4)
-F (.\UART.c)(0x60C51626)(-c --cpu Cortex-M4 -D__EVAL -g -O0 --apcs=interwork -I "E:\Courses_Talta 7asebaat\2nd Term\Micro Processors\Keil 4\ARM\RV31\INC"-I "E:\Courses_Talta 7asebaat\2nd Term\Micro Processors\Keil 4\ARM\CMSIS\Include"-I "E:\Courses_Talta 7asebaat\2nd Term\Micro Processors\Keil 4\ARM\Inc\TI\TM4C123"-DTM4C123GH6PM-o .\uart.o --omf_browse .\uart.crf --depend .\uart.d)
-I (tm4c123gh6pm.h)(0x60C50CF5)
-I (E:\Courses_Talta 7asebaat\2nd Term\Micro Processors\Keil 4\ARM\ARMCC\include\stdint.h)(0x51C819B4)
-F (.\tm4c123gh6pm.h)(0x60C50CF5)()
-F (.\LED.c)(0x60C50CF5)(-c --cpu Cortex-M4 -D__EVAL -g -O0 --apcs=interwork -I "E:\Courses_Talta 7asebaat\2nd Term\Micro Processors\Keil 4\ARM\RV31\INC"-I "E:\Courses_Talta 7asebaat\2nd Term\Micro Processors\Keil 4\ARM\CMSIS\Include"-I "E:\Courses_Talta 7asebaat\2nd Term\Micro Processors\Keil 4\ARM\Inc\TI\TM4C123"-DTM4C123GH6PM-o .\led.o --omf_browse .\led.crf --depend .\led.d)
-I (tm4c123gh6pm.h)(0x60C50CF5)
-I (E:\Courses_Talta 7asebaat\2nd Term\Micro Processors\Keil 4\ARM\ARMCC\include\stdint.h)(0x51C819B4)
-F (.\SYSTICK.c)(0x60C50CF5)(-c --cpu Cortex-M4 -D__EVAL -g -O0 --apcs=interwork -I "E:\Courses_Talta 7asebaat\2nd Term\Micro Processors\Keil 4\ARM\RV31\INC"-I "E:\Courses_Talta 7asebaat\2nd Term\Micro Processors\Keil 4\ARM\CMSIS\Include"-I "E:\Courses_Talta 7asebaat\2nd Term\Micro Processors\Keil 4\ARM\Inc\TI\TM4C123"-DTM4C123GH6PM-o .\systick.o --omf_browse .\systick.crf --depend .\systick.d)
-I (tm4c123gh6pm.h)(0x60C50CF5)
-I (E:\Courses_Talta 7asebaat\2nd Term\Micro Processors\Keil 4\ARM\ARMCC\include\stdint.h)(0x51C819B4)
-F (.\LCD.c)(0x60C50CF5)(-c --cpu Cortex-M4 -D__EVAL -g -O0 --apcs=interwork -I "E:\Courses_Talta 7asebaat\2nd Term\Micro Processors\Keil 4\ARM\RV31\INC"-I "E:\Courses_Talta 7asebaat\2nd Term\Micro Processors\Keil 4\ARM\CMSIS\Include"-I "E:\Courses_Talta 7asebaat\2nd Term\Micro Processors\Keil 4\ARM\Inc\TI\TM4C123"-DTM4C123GH6PM-o .\lcd.o --omf_browse .\lcd.crf --depend .\lcd.d)
-I (tm4c123gh6pm.h)(0x60C50CF5)
-I (E:\Courses_Talta 7asebaat\2nd Term\Micro Processors\Keil 4\ARM\ARMCC\include\stdint.h)(0x51C819B4)
-I (SYSTICK.h)(0x60C50CF5)
-I (E:\Courses_Talta 7asebaat\2nd Term\Micro Processors\Keil 4\ARM\ARMCC\include\string.h)(0x51C819B4)
+F (.\startup_TM4C123.s)(0x60C533CA)(--cpu Cortex-M4 --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123--list .\startup_tm4c123.lst --xref -o .\startup_tm4c123.o --depend .\startup_tm4c123.d)
+F (.\main.c)(0x60C53418)(-c --cpu Cortex-M4 -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\main.o --omf_browse .\main.crf --depend .\main.d)
+I (tm4c123gh6pm.h)(0x60C533CA)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C819B4)
+I (UART.h)(0x60C533CA)
+I (LCD.h)(0x60C533CA)
+I (C:\Keil\ARM\ARMCC\include\string.h)(0x51C819B4)
+I (LED.h)(0x60C533CA)
+I (SYSTICK.h)(0x60C533CA)
+I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C819B4)
+I (C:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C819B4)
+I (C:\Keil\ARM\ARMCC\include\math.h)(0x51C819B4)
+I (C:\Keil\ARM\ARMCC\include\time.h)(0x51C819B4)
+I (C:\Keil\ARM\ARMCC\include\ctype.h)(0x51C819B4)
+F (.\UART.c)(0x60C533CA)(-c --cpu Cortex-M4 -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\uart.o --omf_browse .\uart.crf --depend .\uart.d)
+I (tm4c123gh6pm.h)(0x60C533CA)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C819B4)
+F (.\tm4c123gh6pm.h)(0x60C533CA)()
+F (.\LED.c)(0x60C533CA)(-c --cpu Cortex-M4 -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\led.o --omf_browse .\led.crf --depend .\led.d)
+I (tm4c123gh6pm.h)(0x60C533CA)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C819B4)
+F (.\SYSTICK.c)(0x60C533CA)(-c --cpu Cortex-M4 -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\systick.o --omf_browse .\systick.crf --depend .\systick.d)
+I (tm4c123gh6pm.h)(0x60C533CA)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C819B4)
+F (.\LCD.c)(0x60C533CA)(-c --cpu Cortex-M4 -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C123-DTM4C123GH6PM-o .\lcd.o --omf_browse .\lcd.crf --depend .\lcd.d)
+I (tm4c123gh6pm.h)(0x60C533CA)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C819B4)
+I (SYSTICK.h)(0x60C533CA)
+I (C:\Keil\ARM\ARMCC\include\string.h)(0x51C819B4)
