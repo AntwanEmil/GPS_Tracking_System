@@ -11,7 +11,7 @@ for port, desc, hwid in sorted(ports):
         print("{}: {} [{}]".format(port, desc, hwid))
 
 print("2")
-ser = serial.Serial('COM1', baudrate = 9600, timeout=5)
+ser = serial.Serial('COM5', baudrate = 9600, timeout=5)
 while 1:
 
 	coordinate = ser.readline().decode('ascii')

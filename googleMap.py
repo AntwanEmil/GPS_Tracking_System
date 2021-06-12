@@ -10,19 +10,12 @@ for port, desc, hwid in sorted(ports):
         print("{}: {} [{}]".format(port, desc, hwid))
 
 
-ser = serial.Serial('COM1', baudrate = 9600, timeout=5)
+ser = serial.Serial('COM5', baudrate = 9600, timeout=5)
 j = 0
 lat = []
 longet= []
 
 
-while 1:
-	coordinate = ser.readline().decode('ascii')
-	if(j%2 == 0):
-		lat.append(float(coordinate))
-	else:
-		longet.append(float(coordinate))
-	j = j + 1
 
 
 
@@ -30,20 +23,44 @@ while 1:
 
 
 
-'''i=0
+"""
+i=0
 lat_string = ""
 long_string = ""
-with open('array.txt') as f:
-	for line in f:
-		lat_string,long_string = line.split()
+combination = ""
+with open('map_out.txt') as f:
+
+		combination = f.split()
+
+
 		lat.append(lat_string)
 		long.append(long_string)
 		lat[i] = float(lat[i])
 		long[i] = float(long[i])
 		i=i+1
 
-'''
+"""
+
+file_in= open('map_out','r').readline()
+points=file_in.split(' ')
+print(points)
+i = 0
+
+for point in points:
+	if (point != ''):
+		lat.append(   float(point.split("&")[0][0:2]   )+float(point.split("&")[0][2:])/60 )
+		print(float(point.split("&")[0]))
+		print(float(point.split("&")[1]   ))
+		longet.append(   float(point.split("&")[1][0:3]   )+float(point.split("&")[1][3:])/60 )
+
+
+print(lat)
+print(longet)
+
 gmapOne = gmplot.GoogleMapPlotter(lat[0],longet[0], 20)
 gmapOne.scatter(lat, longet, '#0000ff', size=0.5, marker=False)
 gmapOne.plot(lat, longet, 'red', edge_width=2.5)
 gmapOne.draw("map.html")
+
+
+30+02.59201/60
