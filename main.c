@@ -16,6 +16,102 @@ float total_dist;
 
 
 
+
+double atof_m(const char *s){
+int i;
+int sign;
+double value;
+double power;
+int powersign;
+int power2;
+for(i = 0; isspace(s[i]); ++i);
+/*skip white space*/
+
+
+
+
+sign = (s[i] == '-')? -1 : 1; /*The sign of the number*/
+
+
+
+if(s[i] == '-' || s[i] == '+'){
+++i;
+}
+
+
+
+
+for(value = 0.0; isdigit(s[i]); ++i){
+value = value * 10.0 + (s[i] - '0');
+}
+
+
+
+if(s[i] == '.'){
+++i;
+}
+
+
+
+
+for(power = 1.0; isdigit(s[i]); ++i){
+value = value * 10.0 + (s[i] - '0');
+power *= 10.0;
+}
+
+
+
+if(s[i] == 'e' || s[i] == 'E'){
+++i;
+}
+else{
+return sign * value/power;
+}
+
+
+
+/*The sign following the E*/
+powersign = (s[i] == '-')? -1 : 1;
+
+
+
+if(s[i] == '-' || s[i] == '+'){
+++i;
+}
+
+
+
+/*The number following the E*/
+for(power2 = 0; isdigit(s[i]); ++i){
+power2 = power2 * 10 + (s[i] - '0');
+}
+
+
+
+if(powersign == -1){
+while(power2 != 0){
+power *= 10;
+--power2;
+}
+}
+else{
+while(power2 != 0){
+power /= 10;
+--power2;
+}
+}
+
+
+
+return sign * value/power;
+}
+
+
+
+
+
+
+
 double deg2rad(double deg) {
 return (deg * pi / 180);
 }
@@ -50,6 +146,30 @@ return (dist);
 }
 }
 
+
+
+
+/*
+float total_distance(float * total_distance ,float lat1, float long1, float lat2, float long2)
+{
+uint32_t R = 6371000;
+double x1, x2, delta_x, delta_y;
+double a, c, d;
+x1 = lat1 * (PI / 180);
+x2 = lat2 * (PI / 180);
+delta_x = (lat2 - lat1) * (PI / 180);
+delta_y = (long2 - long1) * (PI / 180);
+
+
+
+a = (sin(delta_x / 2) * sin(delta_x / 2)) + cos(x1) * cos(x2) * sin(delta_y / 2) * sin(delta_y / 2);
+c = 2 * atan2(sqrt(a), sqrt(1-a));
+d = R * c;
+*total_distance = *total_distance + d; //total_distance must be initiallized by zero in the main !!!!!!
+
+return d;
+}
+*/
 
 
 
@@ -107,8 +227,8 @@ size = data_line(data);
 
 if (parsing(data, lat1, lon1, size))
 {
-lat1_no = atof(lat1);
-lon1_no = atof(lon1);
+lat1_no = atof_m(lat1);
+lon1_no = atof_m(lon1);
 while (1)
 {
 size = 0;
@@ -119,13 +239,13 @@ size = 0;
 
 
 while (i<10){
-UART0_Write(lat1[i]);
+UART0_Write(lat2[i]);
 i = i+1;
 }
 i=0;
 UART0_Write('&');
 while (i<10){
-UART0_Write(lon1[i]);
+UART0_Write(lon2[i]);
 i = i+1;
 }
 i=0;
@@ -149,9 +269,9 @@ LCD_Cmd(0x01);//clear
 LCD_Cmd(0x80);// start from 1st line
 LCD_STRING(lat2);
 delay_milli(100);
-lat2_no =atof(lat2);
+lat2_no =atof_m(lat2);
 delay_milli(100);
-lon2_no =atof(lon2);
+lon2_no =atof_m(lon2);
 
 
 
