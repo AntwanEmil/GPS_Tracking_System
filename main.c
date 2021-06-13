@@ -109,10 +109,10 @@ double total_distance( float lat1, float lon1, float lat2, float lon2) {
 		dist = acos(dist);
 		dist = rad2deg(dist);
 		dist = dist * 60 * 1.1515;
-		dist = dist * 16.09344;
-		if(dist>=1) 
-		{total_dist = total_dist+dist ;
-		}
+		dist = dist * 32.18688;
+		 
+		total_dist = total_dist+dist ;
+		
 		return (dist);
 	}
 }
