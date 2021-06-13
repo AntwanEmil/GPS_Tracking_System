@@ -126,6 +126,7 @@ void GPIOF_Handler(void) //handler routine name from startup file
 	finish=0;//End the code
 	i=0;
 	
+	delay_milli(200);
 	while (i<4){
 			UART0_Write('0');
 				i = i+1;
@@ -158,10 +159,10 @@ int main() {
 	char lon1[12];
 	char lat2[12];
 	char lon2[12];
-	uint32_t trip_time1;
-	uint32_t trip_time2;
+	//uint32_t trip_time1;
+	//uint32_t trip_time2;
 	uint8_t i;
-	trip_time1=clock();
+	//trip_time1=clock();
 	finish=1;
 	size = 0;
 	total_dist=0;
@@ -184,6 +185,7 @@ int main() {
 	lon1_no=lon1_no*100;
 	LCD_DISTANCE(lon1_no);
 	*/
+	delay_milli(10);
 	
 
 	///////////////////////////////////
@@ -193,7 +195,7 @@ int main() {
 
 	} while (size == -1);
 
-
+while(finish){
 	if (parsing(data, lat1, lon1, size))
 	{
 			lat1_no = atof_m(lat1);
@@ -206,13 +208,13 @@ int main() {
 			
 			
 			while (i<10){
-			UART0_Write(lat1[i]);
+			UART0_Write(lat2[i]);
 				i = i+1;
 			}
 			i=0;
 			UART0_Write('&');			
 			while (i<10){
-			UART0_Write(lon1[i]);
+			UART0_Write(lon2[i]);
 				i = i+1;
 			}
 			i=0;
@@ -251,7 +253,7 @@ int main() {
 				//print dist
 				LCD_Cmd(0x01);//clears
 				LCD_Cmd(0x80);// start from 1st line
-				LCD_STRING("dist=");
+				LCD_STRING("distance=");
 				delay_milli(100);
 				LCD_DISTANCE(total_dist);
 				LED_ON(total_dist);
@@ -260,28 +262,21 @@ int main() {
 				//swap(lat1, lon1, lat2, lon2);
 				lat1_no=lat2_no;
 				lon1_no=lon2_no;
-				
-				//delay_milli(100);
+
 			}
 
 		}
 	}
-	trip_time2=clock();
+}
+	
 	LCD_Cmd(0x01);//clears
 	LCD_Cmd(0x80);// start from 1st line
 	delay_milli(100);
-	LCD_STRING("Total Distance=");
+	LCD_STRING("Tdistance=");
 	delay_milli(10);
 	LCD_DISTANCE(total_dist);
 	delay_milli(10);
-	LCD_STRING("Total Distance=");
-	delay_milli(10);
-	LCD_Cmd(0xC0);// start from 2nd line
-	LCD_STRING("Avg speed=");
-	delay_milli(10);
-	LCD_DISTANCE((total_dist)/((trip_time2-trip_time1)/1000));
-	LCD_STRING("m/s");
-	delay_milli(10);
+
 	
 	
 				
